@@ -1,0 +1,37 @@
+{
+  "name": "lmnt",
+  "version": "0.0.1",
+  "description": "react typescript webpack starter",
+  "main": "index.tsx",
+  "scripts": {
+    "build": "webpack",
+    "copy": "node internals/scripts/copy.js",
+    "start": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
+    "start:prod": "cross-env NODE_ENV=production node server"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "webpack"
+  ],
+  "author": "Dan Handrea",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "compression": "^1.6.2",
+    "cross-env": "^3.1.4",
+    "express": "^4.14.1",
+    "html-loader": "^0.4.4",
+    "ip": "^1.1.4",
+    "ngrok": "^2.2.6",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.5",
+    "typings": "^2.1.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.16.1"
+  }
+}

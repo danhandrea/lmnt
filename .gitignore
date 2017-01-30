@@ -1,0 +1,9 @@
+#def no
+build
+node_modules
+typings
+
+
+
+#?
+.vscode 
