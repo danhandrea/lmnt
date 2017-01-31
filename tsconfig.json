@@ -3,15 +3,19 @@
         "jsx": "react",
         "module": "commonjs",
         "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
         "outDir": "./build/",
-        "preserveConstEnums": true,
+        // "preserveConstEnums": true,
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "removeComments": true,
         "target": "ES5"
     },
     "exclude": [
         "node_modules",
+        "build",
         "internals",
-        "typings/browser.d.ts",
-        "typings/browser"
+        "typings"
     ]
 }

@@ -4,10 +4,12 @@
   "description": "react typescript webpack starter",
   "main": "index.tsx",
   "scripts": {
-    "build": "webpack",
+    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/prod.config.js --progress --profile --colors",
+    "build:dev": "node internals/webpack/dev-server.js",
     "copy": "node internals/scripts/copy.js",
     "start": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
-    "start:prod": "cross-env NODE_ENV=production node server"
+    "start:prod": "cross-env NODE_ENV=production node server",
+    "clean": "rimraf ./build/"
   },
   "keywords": [
     "react",
@@ -17,21 +19,44 @@
   "author": "Dan Handrea",
   "license": "MIT",
   "dependencies": {
+    "@types/classnames": "0.0.32",
+    "@types/lodash": "^4.14.52",
+    "@types/react": "^15.0.5",
+    "@types/react-dom": "^0.14.22",
+    "@types/react-redux": "^4.4.36",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^1.2.2",
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.4",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.2.1"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
     "compression": "^1.6.2",
+    "concurrently": "^3.1.0",
     "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
     "express": "^4.14.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "html-loader": "^0.4.4",
     "ip": "^1.1.4",
     "ngrok": "^2.2.6",
+    "rimraf": "^2.5.4",
+    "source-map": "^0.5.6",
+    "stats-webpack-plugin": "^0.4.3",
+    "style-loader": "^0.13.1",
     "ts-loader": "^2.0.0",
     "typescript": "^2.1.5",
     "typings": "^2.1.0",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.9.0",
+    "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.16.1"
   }
 }
